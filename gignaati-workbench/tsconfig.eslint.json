@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*",
+    "forge.config.ts",
+    "webpack.*.ts",
+    "webpack.rules.ts",
+    "webpack.plugins.ts",
+    "webpack.main.config.ts",
+    "webpack.renderer.config.ts",
+    "tailwind.config.cjs",
+    "postcss.config.cjs",
+    ".eslintrc.cjs"
+  ]
+}

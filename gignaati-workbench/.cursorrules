@@ -1,0 +1,27 @@
+## Naming
+- Use PascalCase for React components and screens
+- Use camelCase for functions, variables, and hooks
+- Prefix React hooks with `use`
+- IPC channel names follow `domain:action` (e.g., `system-info:get`)
+
+## Styling
+- Prefer Tailwind utility classes; extract reusable patterns into components when verbose
+- Keep custom CSS in `src/renderer/index.css` only when Tailwind cannot cover the case
+
+## TypeScript
+- Export types from `src/types`
+- Co-locate service-specific types next to the service and re-export via `src/types/index.ts` when shared
+- Treat all IPC boundaries as async and strongly typed
+
+## React
+- Screens live in `src/screens`, composed from `src/components`
+- Use functional components with hooks, avoid legacy lifecycles
+- Centralize side effects inside hooks or service helpers
+
+## Files & Imports
+- Use configured path aliases instead of relative `../../../`
+- Keep each file under 200 lines where practical
+
+## Testing & Tooling
+- Run `npm run lint` before commits
+- Run `npm run typecheck` for CI readiness
